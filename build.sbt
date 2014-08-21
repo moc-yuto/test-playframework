@@ -4,13 +4,16 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.2"
 
 libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
   ws,
-  "org.scalikejdbc" %% "scalikejdbc-play-plugin" % "1.8.0",
+  "org.json4s" %% "json4s-native" % "3.2.10",
+  "org.json4s" %% "json4s-jackson" % "3.2.10",
+  "org.scalikejdbc" %% "scalikejdbc" % "2.0.5",
+  "org.scalikejdbc" %% "scalikejdbc-play-plugin" % "2.3.0",
   "com.h2database"  %  "h2" % "1.4.181"
 )
